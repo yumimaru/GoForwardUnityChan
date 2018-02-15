@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114018781029294078}
   m_Layer: 0
   m_Name: CubePrefab
-  m_TagString: Untagged
+  m_TagString: CubeTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1807d99351b84776932f41160bae13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 37fd0a72ead6949a7aeb9a405a5de8e9, type: 3}
 --- !u!212 &212001403947617448
 SpriteRenderer:
   m_ObjectHideFlags: 1

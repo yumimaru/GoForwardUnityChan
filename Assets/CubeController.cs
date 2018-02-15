@@ -9,8 +9,18 @@ public class CubeController : MonoBehaviour {
 	// 消滅位置
 	private float deadLine = -10;
 
+	// AudioSorceを格納する変数の宣言
+	private	AudioSource	audioSource;
+
+	public AudioClip sound;
+
 	// Use this for initialization
 	void Start(){
+
+		// AudioSorceコンポーネントを追加し、変数に代入
+		audioSource	= gameObject.AddComponent< AudioSource >();
+		// 鳴らす音(変数)を格納
+		audioSource.clip = sound;
 	}
 
 	// Update is called once per frame
@@ -26,5 +36,13 @@ public class CubeController : MonoBehaviour {
 		if (transform.position.x < this.deadLine){
 			Destroy (gameObject);
 		}
+
+
 	}
+
+	void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.tag == "groundTag" || other.gameObject.tag == "CubeTag") 
+			audioSource.Play();	
+
+		}
 }

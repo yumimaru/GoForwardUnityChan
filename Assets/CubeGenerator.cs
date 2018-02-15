@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class CubeGenerator : MonoBehaviour {
+
 	// キューブのPrefab
 	public GameObject cubePrefab;
 
@@ -39,7 +40,7 @@ public class CubeGenerator : MonoBehaviour {
 		//「Time.deltaTime」でフレーム間の時間の差分を取得できる
 		this.delta += Time.deltaTime;
 
-		// span秒以上の時間が経過したかを調べる
+			// span秒以上の時間が経過したかを調べる
 		//deltaがspanの値を超えたタイミングでキューブを生成
 		if ( this.delta > this.span ){
 			this.delta = 0;
